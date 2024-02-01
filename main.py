@@ -4,6 +4,7 @@ import pyttsx3
 import speech_recognition as sr
 import webbrowser
 
+
 openai.api_key=api_data
 
 completion=openai.Completion()
@@ -40,7 +41,7 @@ def takeCommand():
     return query
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     while True:
         query=takeCommand().lower()
         ans=Reply(query)
